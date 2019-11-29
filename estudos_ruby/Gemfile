@@ -1,0 +1,8 @@
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+git_source(:github) {|Estudos| "https://github.com/viviahnehps/Estudos#{Estudos}" }
+
+# gem "rails"
+
