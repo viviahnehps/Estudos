@@ -1,3 +1,4 @@
+package Inicio;
 import org.openqa.selenium.WebElement;
 
 public class OrangeElementMap {
