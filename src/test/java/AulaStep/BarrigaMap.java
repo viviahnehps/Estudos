@@ -1,4 +1,4 @@
-package Steps;
+package AulaStep;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;

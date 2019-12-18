@@ -8,14 +8,14 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions (
-		          features = "src/test/resources/features/Barriga.feature",
+		          features = "src/test/resources/features/Barrigas.feature",
 		          glue = "Steps",
-		          tags = {"@tipo3, @tipo2"},
+                  tags = "@addContaJaExi",
 		          plugin = "pretty",
+		        		  //"html:target/report-html" },
                   monochrome = true,
-                  snippets = SnippetType.CAMELCASE,
-                  dryRun = false,
-                  strict = false
+                  snippets = SnippetType.CAMELCASE
+                 
 		)
 public class Rodar {
 	
