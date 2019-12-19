@@ -1,17 +1,25 @@
 package Steps;
 
+
+
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
 
 public class ContaMap {
 
 		
-		public static  WebDriver driver;
-		
+		private static final int OutputType = 0;
+		public   WebDriver driver;
+
 		public void openNavegavador(){
 			
 			System.setProperty("webdriver.chrome.driver", "C:/Ferramentas/chromedriver.exe");    	
@@ -26,15 +34,17 @@ public class ContaMap {
 	    }
 	   
 	   public void preencheCampo (String id,String valor){
-		   driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		   driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		   driver.findElement(By.id(id)).sendKeys(valor);
 			}
 	   
 	   public void clicaLink (String link){
+		   driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 			driver.findElement(By.linkText(link)).click();
 	   }
 	   public void clicaBtn (String btn){
 			driver.findElement(By.xpath((btn))).click();
+			//fazer por tagname
 		   }
 	   
 	  
@@ -51,10 +61,9 @@ public class ContaMap {
 		   
 	   }
  
-	  
-	   
-	   public void fechaNavegador(){
-		   driver.quit();
+	    public void fechaNavegador(){
+		   TakesScreenshot scrShot = ((TakesScreenshot) driver);
+		   File srcFile = scrShot.getScreenshotAs(OutputType.FILE);
 	   }
 	}
 

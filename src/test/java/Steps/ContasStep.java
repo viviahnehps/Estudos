@@ -68,24 +68,26 @@ public class ContasStep {
 	@Entao("^visualizo a pagina inicial do Barriga$")
 	public void visualizoAPaginaInicialDoBarriga() throws Throwable {
 		cntM.validaMensagem("/html/body/div[1]", "Bem vindo, Viviane Teste Cucumber!");
-		cntM.fechaNavegador();
+		
 		
 	}
 	
 	@Entao("^sou notificado que o nome da conta e obrigatorio$")
 	public void souNotificadoQueONomeDaContaEObrigatorio() throws Throwable {
 		cntM.validaMensagem("/html/body/div[1]", "Informe o nome da conta");
-		cntM.fechaNavegador();
+		
 	}
 	@Entao("^a conta e inserida com sucesso$")
 	public void aContaInseridaComSucesso() throws Throwable {
 	    cntM.validaMensagem("/html/body/div[1]","Conta adicionada com sucesso!");
-		cntM.fechaNavegador();
+		
 	}
+	
+	
 	@Entao("^sou notificado que a conta ja existe$")
 	public void souNotificadoQueAContaJaExiste() throws Throwable {
 		 cntM.validaMensagem("/html/body/div[1]","Já existe uma conta com esse nome!");
-		 cntM.fechaNavegador();
+		 ;
 		
 	} 
 
